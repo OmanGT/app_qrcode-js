@@ -3,31 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>To-Do List</title>
+    <title>QR-Code Generator</title>
     <link href="src/css/style.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
       <div class="card">
         <div class="title">
-          <h2>To-Do List</h2>
-          <img src="src/img/ToDo.png" />
+          <h2>Generator</h2>
+          <img src="src/img/qrcode.png" />
+          <div class="qr">
+            <h5>QR</h5>
+            <h6 class="code">Code</h6>
+          </div>
         </div>
         <div class="row">
-          <!-- <form action=""> -->
           <input
             type="text"
             name="inputTask"
-            id="inputTask"
-            placeholder="Add Task"
+            id="qrText"
+            placeholder="Add the text you want to generate"
           />
-          <button onclick="addTask()">Add</button>
-          <!-- </form> -->
+          <button onclick="generateQR()">Generate</button>
         </div>
-        <ul id="list-container">
-          <!-- <li class="checked">Task 1</li>
-          <li>Task 1</li> -->
-        </ul>
+        <div id="imgBox">
+          <img src="" id="qrImage" />
+          <h6 class="show-text"></h6>
+        </div>
         <div class="footer">
           <p>Design by <a href="">OmanGT</a> 2024</p>
         </div>
